@@ -2,11 +2,11 @@
 from mcp.server.fastmcp import FastMCP
 from weather import get_weather as weather_tool
 
-mcp= FastMCP("weather server")
+mcp= FastMCP("weather-server")
 
 
 @mcp.tool()
-async def get_weather(city: str) -> dict:
+async def get_weather(city: str) :
     """Get current weather for a city"""
     return await weather_tool(city)  
         

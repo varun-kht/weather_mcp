@@ -1,10 +1,10 @@
 import httpx
 
-async def gef_weather(city:str):
+async def get_weather(city:str):
     geo_url = "https://geocoding-api.open-meteo.com/v1/search"
     
     async with httpx.AsyncClient() as client:
-        geo = await client,get(
+        geo = await client.get(
             geo_url,
             params={"name":city,"count":1}
 
